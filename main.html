@@ -1,16 +1,178 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .block-heading {
+            text-align: center;
+            color: #3b99e0;
+            margin-bottom: 20px;
+        }
+
+        .cart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary {
+            background-color: #f7fbff;
+            padding: 20px;
+            border-radius: 10px;
+            border-top: 2px solid #5ea4f3;
+        }
+
+        .checkout-btn {
+            background-color: #3b99e0;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .checkout-btn:hover {
+            background-color: #5ea4f3;
+        }
+
+        .product {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .product img {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-info a {
+            color: #3b99e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .product-info a:hover {
+            text-decoration: underline;
+        }
+
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+
+        .summary-table {
+            width: 100%;
+        }
+
+        .summary-table td {
+            padding: 5px 0;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
 
+<div class="container">
+    <!-- Shopping Cart Heading -->
+    <h2 class="block-heading">Shopping cart</h2>
+    <p class="text-center text-muted">The customer is very important, the customer will be followed by the customer.</p>
+
+    <!-- Cart Layout -->
+    <div class="row">
+        <!-- Product List -->
+        <div class="col-lg-8">
+            <div class="cart-container">
+                <!-- Product Item -->
+                <div class="product">
+                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                    <div class="product-info">
+                        <a href="#">Iphone 16</a>
+                        <p class="text-muted">Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
+                    </div>
+                    <div>
+                        <label>Quantity:</label>
+                        <input type="number" class="form-control quantity-input" value="1">
+                    </div>
+                    <div class="ms-3 fw-bold">$120</div>
+                </div>
+
+                <!-- Another Product Item -->
+                <div class="product">
+                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                    <div class="product-info">
+                        <a href="#">Iphone 15</a>
+                        <p class="text-muted">Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
+                    </div>
+                    <div>
+                        <label>Quantity:</label>
+                        <input type="number" class="form-control quantity-input" value="1">
+                    </div>
+                    <div class="ms-3 fw-bold">$120</div>
+                </div>
+
+                <!-- Another Product Item -->
+                <div class="product">
+                    <img src="https://via.placeholder.com/80" alt="Product Image">
+                    <div class="product-info">
+                        <a href="#">Iphone 14</a>
+                        <p class="text-muted">Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
+                    </div>
+                    <div>
+                        <label>Quantity:</label>
+                        <input type="number" class="form-control quantity-input" value="1">
+                    </div>
+                    <div class="ms-3 fw-bold">$120</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="col-lg-4">
+            <div class="summary">
+                <h4>Summary</h4>
+                <table class="summary-table">
+                    <tr>
+                        <td>Subtotal</td>
+                        <td class="text-end">$360</td>
+                    </tr>
+                    <tr>
+                        <td>Discount</td>
+                        <td class="text-end">$0</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td class="text-end">$0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td class="text-end"><strong>$360</strong></td>
+                    </tr>
+                </table>
+                <button class="checkout-btn mt-3">checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
